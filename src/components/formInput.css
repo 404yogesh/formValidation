@@ -1,0 +1,84 @@
+.formInput{
+  
+    display: grid;
+    position: relative;
+    grid-template-columns: 11fr 1fr;
+    justify-content: center;
+    width: 280px;
+    margin-top:.5rem;
+    border: .5px solid grey;
+    border-radius: 10px ;
+    background-color: white;
+    margin-bottom: 24px;
+    padding: 5px;
+}
+
+
+
+input{
+    padding-left:15px;
+    font-size:15px;
+    margin:7px 0px;
+    width: 15rem;
+    /* border: none; */
+    border: .5px solid grey;
+    outline: none;
+    border: hidden;
+    /* border-radius: 10px ; */
+    
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label{
+    transform: translateY(0%);
+    background-color: rgb(253, 251, 231);  
+    color:black;
+    height: 11px;
+}
+
+
+
+.formInput input:invalid[focused="true"] ~ span{
+    display: grid;
+  
+}
+
+
+label{   
+    position: absolute;
+    pointer-events: none;
+    left: 1rem;
+    top: -10px;
+    transform:translateY(1.5rem);
+    transform-origin: top center;
+    transition: transform 0.2s ease-out;
+    color: grey;
+}
+
+span{
+  
+    width: 17rem;
+    margin-left:4px;
+    font-size:14px;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(254, 0, 0);
+    display:none;   
+    /* background-color:  rgb(26, 25, 21); */
+    text-shadow: 1px 0px 0px white;
+    position: absolute;
+    top:42px;
+    margin-bottom: 10px;
+    column-span: all;
+  
+}
+
+.iconHolder{
+    cursor: pointer;
+    width: 20px;
+    margin-inline: 5px;
+    /* border: 2px solid black; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
